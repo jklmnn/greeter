@@ -37,7 +37,7 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 		then
 			name=$(echo $nameline | cut -d";" -f2)
 			echo $(date) Greeting $name >> $rundir/logfile
-			su $2 -s /bin/bash -c "espeak -v de \"Hallo $name\""
+			su $2 -s /bin/bash -c "espeak \"Hallo $name\""
 		fi
 	fi
 done < $rundir/isonline
